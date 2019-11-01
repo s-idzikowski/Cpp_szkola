@@ -8,7 +8,6 @@ c) walec
 #include<iostream>
 #include<iomanip>
 #include<cmath>
-#include "cw1_zadanie2.h"
 
 using namespace std;
 
@@ -66,6 +65,21 @@ void ostroslup() {
 	powierzchniaCalkowita = pole_podstawy + 2 * powBocznaPierwsza + 2 * powBocznaDruga;
 	cout << "Powierzchnia calkowita wynosi: " << powierzchniaCalkowita << endl;
 }
+void walec() {
+	cout << "Podaj promien podstawy kola (r) oraz wysokosc walca H: ";
+	double r, H;
+	cin >> r >> H;
+	double V;
+	V = M_PI * pow(r,2) * H; //V - objetosc walca
+	cout << "Objetosc walca wynosi: " << V <<endl;
+
+	double Pc, Pp, Pb; //pole calkowite, pole powierzchni podstawy, pole powierzchni bocznej
+	Pp = M_PI * pow(r, 2);
+	Pb = 2 * M_PI * r * H;
+	Pc = 2 * Pp + Pb;
+
+	cout << "Pole powierzchni calkowitej wynosi: " << Pc<< endl;
+}
 
 int main() {
 	int wybor;
@@ -88,13 +102,12 @@ int main() {
 		break;
 	case 3:
 		cout << "Wybrano 3\n";
-		//to do 
+		walec();
 		break;
 	default:
 		cout << "Dokonano blednego wyboru\n";
 		break;
 	}
-	cout << "Wybrano: " << wybor << endl;
 	
 }
 
