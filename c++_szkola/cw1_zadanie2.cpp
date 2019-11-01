@@ -8,8 +8,10 @@ c) walec
 #include<iostream>
 #include<iomanip>
 #include<cmath>
+#include "cw1_zadanie2.h"
 
 using namespace std;
+
 void graniastoslup() {
 	double a, b, h, h_gran; //a, b - d³ugoœæ podstawy trapeza, h - wysokoœæ podstawy trapeza
 	cout << "Podaj dwie dlugosci podstawy trapeza\n";
@@ -21,7 +23,7 @@ void graniastoslup() {
 
 	double objetosc;
 	double pole_podstawy;
-	pole_podstawy = (a + b) * h / 2.0;
+	pole_podstawy = ((a + b) * h) / 2.0;
 	objetosc =  pole_podstawy * h_gran;
 
 	double pole_powierzni_calkowitej, pole_powierzchni_bocznej;
@@ -38,6 +40,31 @@ void graniastoslup() {
 	pole_powierzni_calkowitej = 2 * pole_podstawy + pole_powierzchni_bocznej;
 	
 	cout << "Objetosc wynosi: " << objetosc << endl << "Pole powierzchni calkowitej: " << pole_powierzni_calkowitej;
+}
+void ostroslup() {
+	double a, b, c;
+	cout << "Podaj dwie dlugosci bokow podstawy ostroslupa: \n";
+	cin >> a >> b;
+	cout << "Podaj dlugosc krawedzi bocznej ostroslupa: \n";
+	cin >> c;
+
+	double objetosc, pole_podstawy, wysokosc, polPzrekatnejPodstawy;
+	pole_podstawy = a * b;
+	polPzrekatnejPodstawy = sqrt(pow(0.5 * a, 2) + pow(0.5 * b, 2));
+	wysokosc = sqrt(pow(c, 2) - pow(polPzrekatnejPodstawy, 2));
+
+	objetosc = 1.0 / 3 * pole_podstawy * wysokosc;
+
+	cout << "Objetosc wynosi: " << objetosc << endl;
+
+	double powierzchniaCalkowita, powBocznaPierwsza, powBocznaDruga;
+	double h1, h2; //zmienne pomocnicze do wyznaczenia wysokosci trojkatow pola powierzchni bocznych
+	h1 = sqrt(pow(0.5 * a, 2) + pow(wysokosc, 2));
+	h2 = sqrt(pow(0.5 * b, 2) + pow(wysokosc, 2));
+	powBocznaPierwsza = 0.5 * a * h1;
+	powBocznaDruga = 0.5 * b * h2;
+	powierzchniaCalkowita = pole_podstawy + 2 * powBocznaPierwsza + 2 * powBocznaDruga;
+	cout << "Powierzchnia calkowita wynosi: " << powierzchniaCalkowita << endl;
 }
 
 int main() {
@@ -57,7 +84,7 @@ int main() {
 		break;
 	case 2:
 		cout << "Wybrano 2\n";
-		//to do
+		ostroslup();
 		break;
 	case 3:
 		cout << "Wybrano 3\n";
