@@ -9,7 +9,6 @@ zalozenia:
 
 #include <iostream>
 #include <iomanip>
-#include "zadanie2.h"
 
 using namespace std;
 
