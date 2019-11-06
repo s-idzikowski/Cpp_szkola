@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="zadanie.cpp">
+    <ClCompile Include="pp04_02_min_max_3liczb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{20D7E5DF-60A4-4027-813C-455889A03F36}</ProjectGuid>
-    <RootNamespace>cw3zadanie3</RootNamespace>
+    <ProjectGuid>{49CE6B0E-A113-4AD9-9BA5-8C2855957E34}</ProjectGuid>
+    <RootNamespace>cw3zadanie1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>cw2_zadanie3</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -124,7 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\c++_szkola\cw1_zadanie2.cpp" />
+    <ClCompile Include="pp04_02_min_max_3liczb.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
