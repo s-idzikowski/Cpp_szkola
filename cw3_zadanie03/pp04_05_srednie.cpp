@@ -24,8 +24,9 @@ double sr_h(double x, double y) { //srednia harmoniczna
 		return 2 / pom;
 	return pom;
 }
-double sr_p(double x, double y, double r) { //srednia potegowa
-	return 0;
+double sr_p(double x, double y, double k) { //srednia potegowa
+	double pom_licznik = (pow(x, k) + pow(y, k));
+	return pow(pom_licznik / 2.0, 1.0 / k);
 }
 int main() {
 	double  wynik, liczba1, liczba2;
@@ -48,7 +49,7 @@ int main() {
 		break;
 	case'p':
 		double rzad;
-		cout << "Podaj rzad potegi";
+		cout << "Podaj rzad potegi: ";
 		cin >> rzad;
 		wynik = sr_p(liczba1, liczba2, rzad);
 		break;
