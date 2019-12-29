@@ -24,9 +24,28 @@ float sumuj(float* t, int n) {
 		float suma = 0;
 		for (int i = 0; i < n; i++)
 			suma += t[i]; //suma = suma +t[i]
-		cout << "\nsuma = " << suma;
 		return suma;
 	}
+float podaj_max(float* t, int n) {
+	float max = t[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (max < t[i])
+			max = t[i];
+	}
+	return max;
+}
+void sortuj_babelkowo(float* t, int n) {
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 1; j < n-i; j++)
+		{
+			if (t[j - 1] > t[j]) {
+				swap(t[j - 1], t[j]);
+			}
+		}
+	}
+}
 
 
 int main() {
@@ -36,4 +55,9 @@ int main() {
 	wyswietl_wartosci(tablica, rozmiar);
 	float suma = sumuj(tablica, rozmiar);
 	cout << "\nsuma = " << suma;
+	float max = podaj_max(tablica, rozmiar);
+	cout << "\nmax = " << max;
+	sortuj_babelkowo(tablica, rozmiar);
+	cout << "\nPosortowana tablica: ";
+	wyswietl_wartosci(tablica, rozmiar);
 }
