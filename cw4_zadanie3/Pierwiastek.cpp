@@ -7,7 +7,7 @@ using namespace std;
 double oblicz_pierwiastek(double x, double e) {
 	double w = 1.0;
 	
-	while (abs(pow(w, 2) - x) >= e)
+	while (fabs(pow(w, 2) - x) >= e)
 	{
 		w = (x / w + w) / 2;
 		cout << "*"; //ilosc iteracji
